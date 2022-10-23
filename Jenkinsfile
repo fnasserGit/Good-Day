@@ -18,5 +18,12 @@ pipeline {
             }
         }
     }
-    
-}
+    {
+        post
+        {
+         always
+            {
+                emailext body: 'Summary', subject: 'Pipeline Status', to: 'fadnasser@outlook.com'
+            }
+        }
+    }
